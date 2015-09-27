@@ -52,6 +52,6 @@ void loop() {
   //10 a 15 = Forma as letras A,B,C,D,E,F
   for (byte count = 0; count < 16; count++) {
      sevenSegWrite(count);
+     delay(1000);
   }
-  delay(1000);
 }
