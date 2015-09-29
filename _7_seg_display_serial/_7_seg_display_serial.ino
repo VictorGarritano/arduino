@@ -51,12 +51,7 @@ void loop() {
   //Faz a leitura da entrada pelo monitor serial e exibe o caracter correspondente no display
   if(Serial.available() > 0) {
     Serial.print("Entre com um nº de 0 a 15: ");
-    byte digit = Serial.read();
-      if(digit < 0 || digit > 15) {
-        Serial.println("Entrada fora dos limites");
-      }
-      else {
-        sevenSegWrite(digit);
-      }
+    int digit = Serial.read();
+    sevenSegWrite(digit);
   }
 }
